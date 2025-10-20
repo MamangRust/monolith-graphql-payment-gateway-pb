@@ -575,7 +575,7 @@ func (x *ApiResponseRole) GetData() *RoleResponse {
 	return nil
 }
 
-type ApiResponseDeleteAt struct {
+type ApiResponseRoleDeleteAt struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
 	Message       string                 `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
@@ -584,20 +584,20 @@ type ApiResponseDeleteAt struct {
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *ApiResponseDeleteAt) Reset() {
-	*x = ApiResponseDeleteAt{}
+func (x *ApiResponseRoleDeleteAt) Reset() {
+	*x = ApiResponseRoleDeleteAt{}
 	mi := &file_role_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *ApiResponseDeleteAt) String() string {
+func (x *ApiResponseRoleDeleteAt) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*ApiResponseDeleteAt) ProtoMessage() {}
+func (*ApiResponseRoleDeleteAt) ProtoMessage() {}
 
-func (x *ApiResponseDeleteAt) ProtoReflect() protoreflect.Message {
+func (x *ApiResponseRoleDeleteAt) ProtoReflect() protoreflect.Message {
 	mi := &file_role_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -609,26 +609,26 @@ func (x *ApiResponseDeleteAt) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use ApiResponseDeleteAt.ProtoReflect.Descriptor instead.
-func (*ApiResponseDeleteAt) Descriptor() ([]byte, []int) {
+// Deprecated: Use ApiResponseRoleDeleteAt.ProtoReflect.Descriptor instead.
+func (*ApiResponseRoleDeleteAt) Descriptor() ([]byte, []int) {
 	return file_role_proto_rawDescGZIP(), []int{10}
 }
 
-func (x *ApiResponseDeleteAt) GetStatus() string {
+func (x *ApiResponseRoleDeleteAt) GetStatus() string {
 	if x != nil {
 		return x.Status
 	}
 	return ""
 }
 
-func (x *ApiResponseDeleteAt) GetMessage() string {
+func (x *ApiResponseRoleDeleteAt) GetMessage() string {
 	if x != nil {
 		return x.Message
 	}
 	return ""
 }
 
-func (x *ApiResponseDeleteAt) GetData() *RoleResponseDeleteAt {
+func (x *ApiResponseRoleDeleteAt) GetData() *RoleResponseDeleteAt {
 	if x != nil {
 		return x.Data
 	}
@@ -875,8 +875,8 @@ const file_role_proto_rawDesc = "" +
 	"\x0fApiResponseRole\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12$\n" +
-	"\x04data\x18\x03 \x01(\v2\x10.pb.RoleResponseR\x04data\"u\n" +
-	"\x13ApiResponseDeleteAt\x12\x16\n" +
+	"\x04data\x18\x03 \x01(\v2\x10.pb.RoleResponseR\x04data\"y\n" +
+	"\x17ApiResponseRoleDeleteAt\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12,\n" +
 	"\x04data\x18\x03 \x01(\v2\x18.pb.RoleResponseDeleteAtR\x04data\"j\n" +
@@ -897,7 +897,7 @@ const file_role_proto_rawDesc = "" +
 	"\x04data\x18\x03 \x03(\v2\x18.pb.RoleResponseDeleteAtR\x04data\x122\n" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x12.pb.PaginationMetaR\n" +
-	"pagination2\xd8\x06\n" +
+	"pagination2\xe0\x06\n" +
 	"\vRoleService\x12F\n" +
 	"\vFindAllRole\x12\x16.pb.FindAllRoleRequest\x1a\x1d.pb.ApiResponsePaginationRole\"\x00\x12>\n" +
 	"\fFindByIdRole\x12\x17.pb.FindByIdRoleRequest\x1a\x13.pb.ApiResponseRole\"\x00\x12O\n" +
@@ -907,9 +907,9 @@ const file_role_proto_rawDesc = "" +
 	"\n" +
 	"CreateRole\x12\x15.pb.CreateRoleRequest\x1a\x13.pb.ApiResponseRole\"\x00\x12:\n" +
 	"\n" +
-	"UpdateRole\x12\x15.pb.UpdateRoleRequest\x1a\x13.pb.ApiResponseRole\"\x00\x12A\n" +
-	"\vTrashedRole\x12\x17.pb.FindByIdRoleRequest\x1a\x17.pb.ApiResponseDeleteAt\"\x00\x12A\n" +
-	"\vRestoreRole\x12\x17.pb.FindByIdRoleRequest\x1a\x17.pb.ApiResponseDeleteAt\"\x00\x12K\n" +
+	"UpdateRole\x12\x15.pb.UpdateRoleRequest\x1a\x13.pb.ApiResponseRole\"\x00\x12E\n" +
+	"\vTrashedRole\x12\x17.pb.FindByIdRoleRequest\x1a\x1b.pb.ApiResponseRoleDeleteAt\"\x00\x12E\n" +
+	"\vRestoreRole\x12\x17.pb.FindByIdRoleRequest\x1a\x1b.pb.ApiResponseRoleDeleteAt\"\x00\x12K\n" +
 	"\x13DeleteRolePermanent\x12\x17.pb.FindByIdRoleRequest\x1a\x19.pb.ApiResponseRoleDelete\"\x00\x12B\n" +
 	"\x0eRestoreAllRole\x12\x16.google.protobuf.Empty\x1a\x16.pb.ApiResponseRoleAll\"\x00\x12J\n" +
 	"\x16DeleteAllRolePermanent\x12\x16.google.protobuf.Empty\x1a\x16.pb.ApiResponseRoleAll\"\x00B;Z9github.com/MamangRust/monolith-graphql-payment-gateway-pbb\x06proto3"
@@ -938,7 +938,7 @@ var file_role_proto_goTypes = []any{
 	(*ApiResponseRoleAll)(nil),                // 7: pb.ApiResponseRoleAll
 	(*ApiResponseRoleDelete)(nil),             // 8: pb.ApiResponseRoleDelete
 	(*ApiResponseRole)(nil),                   // 9: pb.ApiResponseRole
-	(*ApiResponseDeleteAt)(nil),               // 10: pb.ApiResponseDeleteAt
+	(*ApiResponseRoleDeleteAt)(nil),           // 10: pb.ApiResponseRoleDeleteAt
 	(*ApiResponsesRole)(nil),                  // 11: pb.ApiResponsesRole
 	(*ApiResponsePaginationRole)(nil),         // 12: pb.ApiResponsePaginationRole
 	(*ApiResponsePaginationRoleDeleteAt)(nil), // 13: pb.ApiResponsePaginationRoleDeleteAt
@@ -949,7 +949,7 @@ var file_role_proto_goTypes = []any{
 var file_role_proto_depIdxs = []int32{
 	14, // 0: pb.RoleResponseDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
 	5,  // 1: pb.ApiResponseRole.data:type_name -> pb.RoleResponse
-	6,  // 2: pb.ApiResponseDeleteAt.data:type_name -> pb.RoleResponseDeleteAt
+	6,  // 2: pb.ApiResponseRoleDeleteAt.data:type_name -> pb.RoleResponseDeleteAt
 	5,  // 3: pb.ApiResponsesRole.data:type_name -> pb.RoleResponse
 	5,  // 4: pb.ApiResponsePaginationRole.data:type_name -> pb.RoleResponse
 	15, // 5: pb.ApiResponsePaginationRole.pagination:type_name -> pb.PaginationMeta
@@ -974,8 +974,8 @@ var file_role_proto_depIdxs = []int32{
 	11, // 24: pb.RoleService.FindByUserId:output_type -> pb.ApiResponsesRole
 	9,  // 25: pb.RoleService.CreateRole:output_type -> pb.ApiResponseRole
 	9,  // 26: pb.RoleService.UpdateRole:output_type -> pb.ApiResponseRole
-	10, // 27: pb.RoleService.TrashedRole:output_type -> pb.ApiResponseDeleteAt
-	10, // 28: pb.RoleService.RestoreRole:output_type -> pb.ApiResponseDeleteAt
+	10, // 27: pb.RoleService.TrashedRole:output_type -> pb.ApiResponseRoleDeleteAt
+	10, // 28: pb.RoleService.RestoreRole:output_type -> pb.ApiResponseRoleDeleteAt
 	8,  // 29: pb.RoleService.DeleteRolePermanent:output_type -> pb.ApiResponseRoleDelete
 	7,  // 30: pb.RoleService.RestoreAllRole:output_type -> pb.ApiResponseRoleAll
 	7,  // 31: pb.RoleService.DeleteAllRolePermanent:output_type -> pb.ApiResponseRoleAll
