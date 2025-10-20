@@ -75,8 +75,8 @@ type TransferServiceClient interface {
 	FindByTrashedTransfer(ctx context.Context, in *FindAllTransferRequest, opts ...grpc.CallOption) (*ApiResponsePaginationTransferDeleteAt, error)
 	CreateTransfer(ctx context.Context, in *CreateTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error)
 	UpdateTransfer(ctx context.Context, in *UpdateTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error)
-	TrashedTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error)
-	RestoreTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error)
+	TrashedTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*TransferResponseDeleteAt, error)
+	RestoreTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*TransferResponseDeleteAt, error)
 	DeleteTransferPermanent(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransferDelete, error)
 	RestoreAllTransfer(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseTransferAll, error)
 	DeleteAllTransferPermanent(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseTransferAll, error)
@@ -310,9 +310,9 @@ func (c *transferServiceClient) UpdateTransfer(ctx context.Context, in *UpdateTr
 	return out, nil
 }
 
-func (c *transferServiceClient) TrashedTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error) {
+func (c *transferServiceClient) TrashedTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*TransferResponseDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseTransfer)
+	out := new(TransferResponseDeleteAt)
 	err := c.cc.Invoke(ctx, TransferService_TrashedTransfer_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -320,9 +320,9 @@ func (c *transferServiceClient) TrashedTransfer(ctx context.Context, in *FindByI
 	return out, nil
 }
 
-func (c *transferServiceClient) RestoreTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*ApiResponseTransfer, error) {
+func (c *transferServiceClient) RestoreTransfer(ctx context.Context, in *FindByIdTransferRequest, opts ...grpc.CallOption) (*TransferResponseDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseTransfer)
+	out := new(TransferResponseDeleteAt)
 	err := c.cc.Invoke(ctx, TransferService_RestoreTransfer_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -386,8 +386,8 @@ type TransferServiceServer interface {
 	FindByTrashedTransfer(context.Context, *FindAllTransferRequest) (*ApiResponsePaginationTransferDeleteAt, error)
 	CreateTransfer(context.Context, *CreateTransferRequest) (*ApiResponseTransfer, error)
 	UpdateTransfer(context.Context, *UpdateTransferRequest) (*ApiResponseTransfer, error)
-	TrashedTransfer(context.Context, *FindByIdTransferRequest) (*ApiResponseTransfer, error)
-	RestoreTransfer(context.Context, *FindByIdTransferRequest) (*ApiResponseTransfer, error)
+	TrashedTransfer(context.Context, *FindByIdTransferRequest) (*TransferResponseDeleteAt, error)
+	RestoreTransfer(context.Context, *FindByIdTransferRequest) (*TransferResponseDeleteAt, error)
 	DeleteTransferPermanent(context.Context, *FindByIdTransferRequest) (*ApiResponseTransferDelete, error)
 	RestoreAllTransfer(context.Context, *emptypb.Empty) (*ApiResponseTransferAll, error)
 	DeleteAllTransferPermanent(context.Context, *emptypb.Empty) (*ApiResponseTransferAll, error)
@@ -467,10 +467,10 @@ func (UnimplementedTransferServiceServer) CreateTransfer(context.Context, *Creat
 func (UnimplementedTransferServiceServer) UpdateTransfer(context.Context, *UpdateTransferRequest) (*ApiResponseTransfer, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateTransfer not implemented")
 }
-func (UnimplementedTransferServiceServer) TrashedTransfer(context.Context, *FindByIdTransferRequest) (*ApiResponseTransfer, error) {
+func (UnimplementedTransferServiceServer) TrashedTransfer(context.Context, *FindByIdTransferRequest) (*TransferResponseDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TrashedTransfer not implemented")
 }
-func (UnimplementedTransferServiceServer) RestoreTransfer(context.Context, *FindByIdTransferRequest) (*ApiResponseTransfer, error) {
+func (UnimplementedTransferServiceServer) RestoreTransfer(context.Context, *FindByIdTransferRequest) (*TransferResponseDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreTransfer not implemented")
 }
 func (UnimplementedTransferServiceServer) DeleteTransferPermanent(context.Context, *FindByIdTransferRequest) (*ApiResponseTransferDelete, error) {

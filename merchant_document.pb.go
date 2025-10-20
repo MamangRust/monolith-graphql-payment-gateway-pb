@@ -739,6 +739,66 @@ func (x *ApiResponseMerchantDocument) GetData() *MerchantDocument {
 	return nil
 }
 
+type ApiResponseMerchantDocumentDeleteAt struct {
+	state         protoimpl.MessageState    `protogen:"open.v1"`
+	Status        string                    `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
+	Message       string                    `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
+	Data          *MerchantDocumentDeleteAt `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) Reset() {
+	*x = ApiResponseMerchantDocumentDeleteAt{}
+	mi := &file_merchant_document_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ApiResponseMerchantDocumentDeleteAt) ProtoMessage() {}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) ProtoReflect() protoreflect.Message {
+	mi := &file_merchant_document_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ApiResponseMerchantDocumentDeleteAt.ProtoReflect.Descriptor instead.
+func (*ApiResponseMerchantDocumentDeleteAt) Descriptor() ([]byte, []int) {
+	return file_merchant_document_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+func (x *ApiResponseMerchantDocumentDeleteAt) GetData() *MerchantDocumentDeleteAt {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
 type ApiResponsesMerchantDocument struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
@@ -750,7 +810,7 @@ type ApiResponsesMerchantDocument struct {
 
 func (x *ApiResponsesMerchantDocument) Reset() {
 	*x = ApiResponsesMerchantDocument{}
-	mi := &file_merchant_document_proto_msgTypes[11]
+	mi := &file_merchant_document_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -762,7 +822,7 @@ func (x *ApiResponsesMerchantDocument) String() string {
 func (*ApiResponsesMerchantDocument) ProtoMessage() {}
 
 func (x *ApiResponsesMerchantDocument) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_document_proto_msgTypes[11]
+	mi := &file_merchant_document_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -775,7 +835,7 @@ func (x *ApiResponsesMerchantDocument) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponsesMerchantDocument.ProtoReflect.Descriptor instead.
 func (*ApiResponsesMerchantDocument) Descriptor() ([]byte, []int) {
-	return file_merchant_document_proto_rawDescGZIP(), []int{11}
+	return file_merchant_document_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *ApiResponsesMerchantDocument) GetStatus() string {
@@ -811,7 +871,7 @@ type ApiResponsePaginationMerchantDocument struct {
 
 func (x *ApiResponsePaginationMerchantDocument) Reset() {
 	*x = ApiResponsePaginationMerchantDocument{}
-	mi := &file_merchant_document_proto_msgTypes[12]
+	mi := &file_merchant_document_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -823,7 +883,7 @@ func (x *ApiResponsePaginationMerchantDocument) String() string {
 func (*ApiResponsePaginationMerchantDocument) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantDocument) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_document_proto_msgTypes[12]
+	mi := &file_merchant_document_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -836,7 +896,7 @@ func (x *ApiResponsePaginationMerchantDocument) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use ApiResponsePaginationMerchantDocument.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantDocument) Descriptor() ([]byte, []int) {
-	return file_merchant_document_proto_rawDescGZIP(), []int{12}
+	return file_merchant_document_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *ApiResponsePaginationMerchantDocument) GetStatus() string {
@@ -879,7 +939,7 @@ type ApiResponsePaginationMerchantDocumentAt struct {
 
 func (x *ApiResponsePaginationMerchantDocumentAt) Reset() {
 	*x = ApiResponsePaginationMerchantDocumentAt{}
-	mi := &file_merchant_document_proto_msgTypes[13]
+	mi := &file_merchant_document_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -891,7 +951,7 @@ func (x *ApiResponsePaginationMerchantDocumentAt) String() string {
 func (*ApiResponsePaginationMerchantDocumentAt) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantDocumentAt) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_document_proto_msgTypes[13]
+	mi := &file_merchant_document_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -904,7 +964,7 @@ func (x *ApiResponsePaginationMerchantDocumentAt) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use ApiResponsePaginationMerchantDocumentAt.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantDocumentAt) Descriptor() ([]byte, []int) {
-	return file_merchant_document_proto_rawDescGZIP(), []int{13}
+	return file_merchant_document_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *ApiResponsePaginationMerchantDocumentAt) GetStatus() string {
@@ -945,7 +1005,7 @@ type ApiResponseMerchantDocumentDelete struct {
 
 func (x *ApiResponseMerchantDocumentDelete) Reset() {
 	*x = ApiResponseMerchantDocumentDelete{}
-	mi := &file_merchant_document_proto_msgTypes[14]
+	mi := &file_merchant_document_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -957,7 +1017,7 @@ func (x *ApiResponseMerchantDocumentDelete) String() string {
 func (*ApiResponseMerchantDocumentDelete) ProtoMessage() {}
 
 func (x *ApiResponseMerchantDocumentDelete) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_document_proto_msgTypes[14]
+	mi := &file_merchant_document_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -970,7 +1030,7 @@ func (x *ApiResponseMerchantDocumentDelete) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use ApiResponseMerchantDocumentDelete.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantDocumentDelete) Descriptor() ([]byte, []int) {
-	return file_merchant_document_proto_rawDescGZIP(), []int{14}
+	return file_merchant_document_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *ApiResponseMerchantDocumentDelete) GetStatus() string {
@@ -997,7 +1057,7 @@ type ApiResponseMerchantDocumentAll struct {
 
 func (x *ApiResponseMerchantDocumentAll) Reset() {
 	*x = ApiResponseMerchantDocumentAll{}
-	mi := &file_merchant_document_proto_msgTypes[15]
+	mi := &file_merchant_document_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1009,7 +1069,7 @@ func (x *ApiResponseMerchantDocumentAll) String() string {
 func (*ApiResponseMerchantDocumentAll) ProtoMessage() {}
 
 func (x *ApiResponseMerchantDocumentAll) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_document_proto_msgTypes[15]
+	mi := &file_merchant_document_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1022,7 +1082,7 @@ func (x *ApiResponseMerchantDocumentAll) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponseMerchantDocumentAll.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantDocumentAll) Descriptor() ([]byte, []int) {
-	return file_merchant_document_proto_rawDescGZIP(), []int{15}
+	return file_merchant_document_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ApiResponseMerchantDocumentAll) GetStatus() string {
@@ -1112,7 +1172,11 @@ const file_merchant_document_proto_rawDesc = "" +
 	"\x1bApiResponseMerchantDocument\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12(\n" +
-	"\x04data\x18\x03 \x01(\v2\x14.pb.MerchantDocumentR\x04data\"z\n" +
+	"\x04data\x18\x03 \x01(\v2\x14.pb.MerchantDocumentR\x04data\"\x89\x01\n" +
+	"#ApiResponseMerchantDocumentDeleteAt\x12\x16\n" +
+	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage\x120\n" +
+	"\x04data\x18\x03 \x01(\v2\x1c.pb.MerchantDocumentDeleteAtR\x04data\"z\n" +
 	"\x1cApiResponsesMerchantDocument\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12(\n" +
@@ -1136,7 +1200,7 @@ const file_merchant_document_proto_rawDesc = "" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"R\n" +
 	"\x1eApiResponseMerchantDocumentAll\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage2\xbb\b\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage2\xcb\b\n" +
 	"\x17MerchantDocumentService\x12[\n" +
 	"\aFindAll\x12#.pb.FindAllMerchantDocumentsRequest\x1a).pb.ApiResponsePaginationMerchantDocument\"\x00\x12a\n" +
 	"\rFindAllActive\x12#.pb.FindAllMerchantDocumentsRequest\x1a).pb.ApiResponsePaginationMerchantDocument\"\x00\x12d\n" +
@@ -1144,9 +1208,9 @@ const file_merchant_document_proto_rawDesc = "" +
 	"\bFindById\x12#.pb.FindMerchantDocumentByIdRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12N\n" +
 	"\x06Create\x12!.pb.CreateMerchantDocumentRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12N\n" +
 	"\x06Update\x12!.pb.UpdateMerchantDocumentRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12Z\n" +
-	"\fUpdateStatus\x12'.pb.UpdateMerchantDocumentStatusRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12P\n" +
-	"\aTrashed\x12\".pb.TrashedMerchantDocumentRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12P\n" +
-	"\aRestore\x12\".pb.RestoreMerchantDocumentRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12f\n" +
+	"\fUpdateStatus\x12'.pb.UpdateMerchantDocumentStatusRequest\x1a\x1f.pb.ApiResponseMerchantDocument\"\x00\x12X\n" +
+	"\aTrashed\x12\".pb.TrashedMerchantDocumentRequest\x1a'.pb.ApiResponseMerchantDocumentDeleteAt\"\x00\x12X\n" +
+	"\aRestore\x12\".pb.RestoreMerchantDocumentRequest\x1a'.pb.ApiResponseMerchantDocumentDeleteAt\"\x00\x12f\n" +
 	"\x0fDeletePermanent\x12*.pb.DeleteMerchantDocumentPermanentRequest\x1a%.pb.ApiResponseMerchantDocumentDelete\"\x00\x12J\n" +
 	"\n" +
 	"RestoreAll\x12\x16.google.protobuf.Empty\x1a\".pb.ApiResponseMerchantDocumentAll\"\x00\x12R\n" +
@@ -1164,7 +1228,7 @@ func file_merchant_document_proto_rawDescGZIP() []byte {
 	return file_merchant_document_proto_rawDescData
 }
 
-var file_merchant_document_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
+var file_merchant_document_proto_msgTypes = make([]protoimpl.MessageInfo, 17)
 var file_merchant_document_proto_goTypes = []any{
 	(*MerchantDocument)(nil),                        // 0: pb.MerchantDocument
 	(*MerchantDocumentDeleteAt)(nil),                // 1: pb.MerchantDocumentDeleteAt
@@ -1177,52 +1241,54 @@ var file_merchant_document_proto_goTypes = []any{
 	(*DeleteMerchantDocumentPermanentRequest)(nil),  // 8: pb.DeleteMerchantDocumentPermanentRequest
 	(*FindAllMerchantDocumentsRequest)(nil),         // 9: pb.FindAllMerchantDocumentsRequest
 	(*ApiResponseMerchantDocument)(nil),             // 10: pb.ApiResponseMerchantDocument
-	(*ApiResponsesMerchantDocument)(nil),            // 11: pb.ApiResponsesMerchantDocument
-	(*ApiResponsePaginationMerchantDocument)(nil),   // 12: pb.ApiResponsePaginationMerchantDocument
-	(*ApiResponsePaginationMerchantDocumentAt)(nil), // 13: pb.ApiResponsePaginationMerchantDocumentAt
-	(*ApiResponseMerchantDocumentDelete)(nil),       // 14: pb.ApiResponseMerchantDocumentDelete
-	(*ApiResponseMerchantDocumentAll)(nil),          // 15: pb.ApiResponseMerchantDocumentAll
-	(*wrapperspb.StringValue)(nil),                  // 16: google.protobuf.StringValue
-	(*PaginationMeta)(nil),                          // 17: pb.PaginationMeta
-	(*emptypb.Empty)(nil),                           // 18: google.protobuf.Empty
+	(*ApiResponseMerchantDocumentDeleteAt)(nil),     // 11: pb.ApiResponseMerchantDocumentDeleteAt
+	(*ApiResponsesMerchantDocument)(nil),            // 12: pb.ApiResponsesMerchantDocument
+	(*ApiResponsePaginationMerchantDocument)(nil),   // 13: pb.ApiResponsePaginationMerchantDocument
+	(*ApiResponsePaginationMerchantDocumentAt)(nil), // 14: pb.ApiResponsePaginationMerchantDocumentAt
+	(*ApiResponseMerchantDocumentDelete)(nil),       // 15: pb.ApiResponseMerchantDocumentDelete
+	(*ApiResponseMerchantDocumentAll)(nil),          // 16: pb.ApiResponseMerchantDocumentAll
+	(*wrapperspb.StringValue)(nil),                  // 17: google.protobuf.StringValue
+	(*PaginationMeta)(nil),                          // 18: pb.PaginationMeta
+	(*emptypb.Empty)(nil),                           // 19: google.protobuf.Empty
 }
 var file_merchant_document_proto_depIdxs = []int32{
-	16, // 0: pb.MerchantDocumentDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
+	17, // 0: pb.MerchantDocumentDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
 	0,  // 1: pb.ApiResponseMerchantDocument.data:type_name -> pb.MerchantDocument
-	0,  // 2: pb.ApiResponsesMerchantDocument.data:type_name -> pb.MerchantDocument
-	0,  // 3: pb.ApiResponsePaginationMerchantDocument.data:type_name -> pb.MerchantDocument
-	17, // 4: pb.ApiResponsePaginationMerchantDocument.pagination:type_name -> pb.PaginationMeta
-	1,  // 5: pb.ApiResponsePaginationMerchantDocumentAt.data:type_name -> pb.MerchantDocumentDeleteAt
-	17, // 6: pb.ApiResponsePaginationMerchantDocumentAt.pagination:type_name -> pb.PaginationMeta
-	9,  // 7: pb.MerchantDocumentService.FindAll:input_type -> pb.FindAllMerchantDocumentsRequest
-	9,  // 8: pb.MerchantDocumentService.FindAllActive:input_type -> pb.FindAllMerchantDocumentsRequest
-	9,  // 9: pb.MerchantDocumentService.FindAllTrashed:input_type -> pb.FindAllMerchantDocumentsRequest
-	5,  // 10: pb.MerchantDocumentService.FindById:input_type -> pb.FindMerchantDocumentByIdRequest
-	2,  // 11: pb.MerchantDocumentService.Create:input_type -> pb.CreateMerchantDocumentRequest
-	3,  // 12: pb.MerchantDocumentService.Update:input_type -> pb.UpdateMerchantDocumentRequest
-	4,  // 13: pb.MerchantDocumentService.UpdateStatus:input_type -> pb.UpdateMerchantDocumentStatusRequest
-	6,  // 14: pb.MerchantDocumentService.Trashed:input_type -> pb.TrashedMerchantDocumentRequest
-	7,  // 15: pb.MerchantDocumentService.Restore:input_type -> pb.RestoreMerchantDocumentRequest
-	8,  // 16: pb.MerchantDocumentService.DeletePermanent:input_type -> pb.DeleteMerchantDocumentPermanentRequest
-	18, // 17: pb.MerchantDocumentService.RestoreAll:input_type -> google.protobuf.Empty
-	18, // 18: pb.MerchantDocumentService.DeleteAllPermanent:input_type -> google.protobuf.Empty
-	12, // 19: pb.MerchantDocumentService.FindAll:output_type -> pb.ApiResponsePaginationMerchantDocument
-	12, // 20: pb.MerchantDocumentService.FindAllActive:output_type -> pb.ApiResponsePaginationMerchantDocument
-	13, // 21: pb.MerchantDocumentService.FindAllTrashed:output_type -> pb.ApiResponsePaginationMerchantDocumentAt
-	10, // 22: pb.MerchantDocumentService.FindById:output_type -> pb.ApiResponseMerchantDocument
-	10, // 23: pb.MerchantDocumentService.Create:output_type -> pb.ApiResponseMerchantDocument
-	10, // 24: pb.MerchantDocumentService.Update:output_type -> pb.ApiResponseMerchantDocument
-	10, // 25: pb.MerchantDocumentService.UpdateStatus:output_type -> pb.ApiResponseMerchantDocument
-	10, // 26: pb.MerchantDocumentService.Trashed:output_type -> pb.ApiResponseMerchantDocument
-	10, // 27: pb.MerchantDocumentService.Restore:output_type -> pb.ApiResponseMerchantDocument
-	14, // 28: pb.MerchantDocumentService.DeletePermanent:output_type -> pb.ApiResponseMerchantDocumentDelete
-	15, // 29: pb.MerchantDocumentService.RestoreAll:output_type -> pb.ApiResponseMerchantDocumentAll
-	15, // 30: pb.MerchantDocumentService.DeleteAllPermanent:output_type -> pb.ApiResponseMerchantDocumentAll
-	19, // [19:31] is the sub-list for method output_type
-	7,  // [7:19] is the sub-list for method input_type
-	7,  // [7:7] is the sub-list for extension type_name
-	7,  // [7:7] is the sub-list for extension extendee
-	0,  // [0:7] is the sub-list for field type_name
+	1,  // 2: pb.ApiResponseMerchantDocumentDeleteAt.data:type_name -> pb.MerchantDocumentDeleteAt
+	0,  // 3: pb.ApiResponsesMerchantDocument.data:type_name -> pb.MerchantDocument
+	0,  // 4: pb.ApiResponsePaginationMerchantDocument.data:type_name -> pb.MerchantDocument
+	18, // 5: pb.ApiResponsePaginationMerchantDocument.pagination:type_name -> pb.PaginationMeta
+	1,  // 6: pb.ApiResponsePaginationMerchantDocumentAt.data:type_name -> pb.MerchantDocumentDeleteAt
+	18, // 7: pb.ApiResponsePaginationMerchantDocumentAt.pagination:type_name -> pb.PaginationMeta
+	9,  // 8: pb.MerchantDocumentService.FindAll:input_type -> pb.FindAllMerchantDocumentsRequest
+	9,  // 9: pb.MerchantDocumentService.FindAllActive:input_type -> pb.FindAllMerchantDocumentsRequest
+	9,  // 10: pb.MerchantDocumentService.FindAllTrashed:input_type -> pb.FindAllMerchantDocumentsRequest
+	5,  // 11: pb.MerchantDocumentService.FindById:input_type -> pb.FindMerchantDocumentByIdRequest
+	2,  // 12: pb.MerchantDocumentService.Create:input_type -> pb.CreateMerchantDocumentRequest
+	3,  // 13: pb.MerchantDocumentService.Update:input_type -> pb.UpdateMerchantDocumentRequest
+	4,  // 14: pb.MerchantDocumentService.UpdateStatus:input_type -> pb.UpdateMerchantDocumentStatusRequest
+	6,  // 15: pb.MerchantDocumentService.Trashed:input_type -> pb.TrashedMerchantDocumentRequest
+	7,  // 16: pb.MerchantDocumentService.Restore:input_type -> pb.RestoreMerchantDocumentRequest
+	8,  // 17: pb.MerchantDocumentService.DeletePermanent:input_type -> pb.DeleteMerchantDocumentPermanentRequest
+	19, // 18: pb.MerchantDocumentService.RestoreAll:input_type -> google.protobuf.Empty
+	19, // 19: pb.MerchantDocumentService.DeleteAllPermanent:input_type -> google.protobuf.Empty
+	13, // 20: pb.MerchantDocumentService.FindAll:output_type -> pb.ApiResponsePaginationMerchantDocument
+	13, // 21: pb.MerchantDocumentService.FindAllActive:output_type -> pb.ApiResponsePaginationMerchantDocument
+	14, // 22: pb.MerchantDocumentService.FindAllTrashed:output_type -> pb.ApiResponsePaginationMerchantDocumentAt
+	10, // 23: pb.MerchantDocumentService.FindById:output_type -> pb.ApiResponseMerchantDocument
+	10, // 24: pb.MerchantDocumentService.Create:output_type -> pb.ApiResponseMerchantDocument
+	10, // 25: pb.MerchantDocumentService.Update:output_type -> pb.ApiResponseMerchantDocument
+	10, // 26: pb.MerchantDocumentService.UpdateStatus:output_type -> pb.ApiResponseMerchantDocument
+	11, // 27: pb.MerchantDocumentService.Trashed:output_type -> pb.ApiResponseMerchantDocumentDeleteAt
+	11, // 28: pb.MerchantDocumentService.Restore:output_type -> pb.ApiResponseMerchantDocumentDeleteAt
+	15, // 29: pb.MerchantDocumentService.DeletePermanent:output_type -> pb.ApiResponseMerchantDocumentDelete
+	16, // 30: pb.MerchantDocumentService.RestoreAll:output_type -> pb.ApiResponseMerchantDocumentAll
+	16, // 31: pb.MerchantDocumentService.DeleteAllPermanent:output_type -> pb.ApiResponseMerchantDocumentAll
+	20, // [20:32] is the sub-list for method output_type
+	8,  // [8:20] is the sub-list for method input_type
+	8,  // [8:8] is the sub-list for extension type_name
+	8,  // [8:8] is the sub-list for extension extendee
+	0,  // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_merchant_document_proto_init() }
@@ -1237,7 +1303,7 @@ func file_merchant_document_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_merchant_document_proto_rawDesc), len(file_merchant_document_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   16,
+			NumMessages:   17,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

@@ -71,8 +71,8 @@ type WithdrawServiceClient interface {
 	FindByTrashed(ctx context.Context, in *FindAllWithdrawRequest, opts ...grpc.CallOption) (*ApiResponsePaginationWithdrawDeleteAt, error)
 	CreateWithdraw(ctx context.Context, in *CreateWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error)
 	UpdateWithdraw(ctx context.Context, in *UpdateWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error)
-	TrashedWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error)
-	RestoreWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error)
+	TrashedWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApIResponseWithdrawDeleteAt, error)
+	RestoreWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApIResponseWithdrawDeleteAt, error)
 	DeleteWithdrawPermanent(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdrawDelete, error)
 	RestoreAllWithdraw(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseWithdrawAll, error)
 	DeleteAllWithdrawPermanent(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseWithdrawAll, error)
@@ -286,9 +286,9 @@ func (c *withdrawServiceClient) UpdateWithdraw(ctx context.Context, in *UpdateWi
 	return out, nil
 }
 
-func (c *withdrawServiceClient) TrashedWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error) {
+func (c *withdrawServiceClient) TrashedWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApIResponseWithdrawDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseWithdraw)
+	out := new(ApIResponseWithdrawDeleteAt)
 	err := c.cc.Invoke(ctx, WithdrawService_TrashedWithdraw_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -296,9 +296,9 @@ func (c *withdrawServiceClient) TrashedWithdraw(ctx context.Context, in *FindByI
 	return out, nil
 }
 
-func (c *withdrawServiceClient) RestoreWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApiResponseWithdraw, error) {
+func (c *withdrawServiceClient) RestoreWithdraw(ctx context.Context, in *FindByIdWithdrawRequest, opts ...grpc.CallOption) (*ApIResponseWithdrawDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseWithdraw)
+	out := new(ApIResponseWithdrawDeleteAt)
 	err := c.cc.Invoke(ctx, WithdrawService_RestoreWithdraw_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -360,8 +360,8 @@ type WithdrawServiceServer interface {
 	FindByTrashed(context.Context, *FindAllWithdrawRequest) (*ApiResponsePaginationWithdrawDeleteAt, error)
 	CreateWithdraw(context.Context, *CreateWithdrawRequest) (*ApiResponseWithdraw, error)
 	UpdateWithdraw(context.Context, *UpdateWithdrawRequest) (*ApiResponseWithdraw, error)
-	TrashedWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdraw, error)
-	RestoreWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdraw, error)
+	TrashedWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApIResponseWithdrawDeleteAt, error)
+	RestoreWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApIResponseWithdrawDeleteAt, error)
 	DeleteWithdrawPermanent(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdrawDelete, error)
 	RestoreAllWithdraw(context.Context, *emptypb.Empty) (*ApiResponseWithdrawAll, error)
 	DeleteAllWithdrawPermanent(context.Context, *emptypb.Empty) (*ApiResponseWithdrawAll, error)
@@ -435,10 +435,10 @@ func (UnimplementedWithdrawServiceServer) CreateWithdraw(context.Context, *Creat
 func (UnimplementedWithdrawServiceServer) UpdateWithdraw(context.Context, *UpdateWithdrawRequest) (*ApiResponseWithdraw, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateWithdraw not implemented")
 }
-func (UnimplementedWithdrawServiceServer) TrashedWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdraw, error) {
+func (UnimplementedWithdrawServiceServer) TrashedWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApIResponseWithdrawDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TrashedWithdraw not implemented")
 }
-func (UnimplementedWithdrawServiceServer) RestoreWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdraw, error) {
+func (UnimplementedWithdrawServiceServer) RestoreWithdraw(context.Context, *FindByIdWithdrawRequest) (*ApIResponseWithdrawDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RestoreWithdraw not implemented")
 }
 func (UnimplementedWithdrawServiceServer) DeleteWithdrawPermanent(context.Context, *FindByIdWithdrawRequest) (*ApiResponseWithdrawDelete, error) {

@@ -1319,6 +1319,66 @@ func (x *ApiResponseMerchant) GetData() *MerchantResponse {
 	return nil
 }
 
+type ApiResponseMerchantDeleteAt struct {
+	state         protoimpl.MessageState    `protogen:"open.v1"`
+	Status        string                    `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
+	Message       string                    `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
+	Data          *MerchantResponseDeleteAt `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ApiResponseMerchantDeleteAt) Reset() {
+	*x = ApiResponseMerchantDeleteAt{}
+	mi := &file_merchant_proto_msgTypes[20]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ApiResponseMerchantDeleteAt) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ApiResponseMerchantDeleteAt) ProtoMessage() {}
+
+func (x *ApiResponseMerchantDeleteAt) ProtoReflect() protoreflect.Message {
+	mi := &file_merchant_proto_msgTypes[20]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ApiResponseMerchantDeleteAt.ProtoReflect.Descriptor instead.
+func (*ApiResponseMerchantDeleteAt) Descriptor() ([]byte, []int) {
+	return file_merchant_proto_rawDescGZIP(), []int{20}
+}
+
+func (x *ApiResponseMerchantDeleteAt) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *ApiResponseMerchantDeleteAt) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+func (x *ApiResponseMerchantDeleteAt) GetData() *MerchantResponseDeleteAt {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
 type ApiResponseMerchantDelete struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
@@ -1329,7 +1389,7 @@ type ApiResponseMerchantDelete struct {
 
 func (x *ApiResponseMerchantDelete) Reset() {
 	*x = ApiResponseMerchantDelete{}
-	mi := &file_merchant_proto_msgTypes[20]
+	mi := &file_merchant_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1341,7 +1401,7 @@ func (x *ApiResponseMerchantDelete) String() string {
 func (*ApiResponseMerchantDelete) ProtoMessage() {}
 
 func (x *ApiResponseMerchantDelete) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[20]
+	mi := &file_merchant_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1354,7 +1414,7 @@ func (x *ApiResponseMerchantDelete) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponseMerchantDelete.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantDelete) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{20}
+	return file_merchant_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *ApiResponseMerchantDelete) GetStatus() string {
@@ -1381,7 +1441,7 @@ type ApiResponseMerchantAll struct {
 
 func (x *ApiResponseMerchantAll) Reset() {
 	*x = ApiResponseMerchantAll{}
-	mi := &file_merchant_proto_msgTypes[21]
+	mi := &file_merchant_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1393,7 +1453,7 @@ func (x *ApiResponseMerchantAll) String() string {
 func (*ApiResponseMerchantAll) ProtoMessage() {}
 
 func (x *ApiResponseMerchantAll) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[21]
+	mi := &file_merchant_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1406,7 +1466,7 @@ func (x *ApiResponseMerchantAll) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponseMerchantAll.ProtoReflect.Descriptor instead.
 func (*ApiResponseMerchantAll) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{21}
+	return file_merchant_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *ApiResponseMerchantAll) GetStatus() string {
@@ -1435,7 +1495,7 @@ type ApiResponsePaginationMerchant struct {
 
 func (x *ApiResponsePaginationMerchant) Reset() {
 	*x = ApiResponsePaginationMerchant{}
-	mi := &file_merchant_proto_msgTypes[22]
+	mi := &file_merchant_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1447,7 +1507,7 @@ func (x *ApiResponsePaginationMerchant) String() string {
 func (*ApiResponsePaginationMerchant) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchant) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[22]
+	mi := &file_merchant_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1460,7 +1520,7 @@ func (x *ApiResponsePaginationMerchant) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiResponsePaginationMerchant.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchant) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{22}
+	return file_merchant_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *ApiResponsePaginationMerchant) GetStatus() string {
@@ -1503,7 +1563,7 @@ type ApiResponsePaginationMerchantDeleteAt struct {
 
 func (x *ApiResponsePaginationMerchantDeleteAt) Reset() {
 	*x = ApiResponsePaginationMerchantDeleteAt{}
-	mi := &file_merchant_proto_msgTypes[23]
+	mi := &file_merchant_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1515,7 +1575,7 @@ func (x *ApiResponsePaginationMerchantDeleteAt) String() string {
 func (*ApiResponsePaginationMerchantDeleteAt) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantDeleteAt) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[23]
+	mi := &file_merchant_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1528,7 +1588,7 @@ func (x *ApiResponsePaginationMerchantDeleteAt) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use ApiResponsePaginationMerchantDeleteAt.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantDeleteAt) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{23}
+	return file_merchant_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *ApiResponsePaginationMerchantDeleteAt) GetStatus() string {
@@ -1571,7 +1631,7 @@ type ApiResponsePaginationMerchantTransaction struct {
 
 func (x *ApiResponsePaginationMerchantTransaction) Reset() {
 	*x = ApiResponsePaginationMerchantTransaction{}
-	mi := &file_merchant_proto_msgTypes[24]
+	mi := &file_merchant_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1583,7 +1643,7 @@ func (x *ApiResponsePaginationMerchantTransaction) String() string {
 func (*ApiResponsePaginationMerchantTransaction) ProtoMessage() {}
 
 func (x *ApiResponsePaginationMerchantTransaction) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[24]
+	mi := &file_merchant_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1596,7 +1656,7 @@ func (x *ApiResponsePaginationMerchantTransaction) ProtoReflect() protoreflect.M
 
 // Deprecated: Use ApiResponsePaginationMerchantTransaction.ProtoReflect.Descriptor instead.
 func (*ApiResponsePaginationMerchantTransaction) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{24}
+	return file_merchant_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *ApiResponsePaginationMerchantTransaction) GetStatus() string {
@@ -1638,7 +1698,7 @@ type FindAllMerchantRequest struct {
 
 func (x *FindAllMerchantRequest) Reset() {
 	*x = FindAllMerchantRequest{}
-	mi := &file_merchant_proto_msgTypes[25]
+	mi := &file_merchant_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1650,7 +1710,7 @@ func (x *FindAllMerchantRequest) String() string {
 func (*FindAllMerchantRequest) ProtoMessage() {}
 
 func (x *FindAllMerchantRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[25]
+	mi := &file_merchant_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1663,7 +1723,7 @@ func (x *FindAllMerchantRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindAllMerchantRequest.ProtoReflect.Descriptor instead.
 func (*FindAllMerchantRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{25}
+	return file_merchant_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *FindAllMerchantRequest) GetPage() int32 {
@@ -1699,7 +1759,7 @@ type FindAllMerchantTransaction struct {
 
 func (x *FindAllMerchantTransaction) Reset() {
 	*x = FindAllMerchantTransaction{}
-	mi := &file_merchant_proto_msgTypes[26]
+	mi := &file_merchant_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1711,7 +1771,7 @@ func (x *FindAllMerchantTransaction) String() string {
 func (*FindAllMerchantTransaction) ProtoMessage() {}
 
 func (x *FindAllMerchantTransaction) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[26]
+	mi := &file_merchant_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1724,7 +1784,7 @@ func (x *FindAllMerchantTransaction) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindAllMerchantTransaction.ProtoReflect.Descriptor instead.
 func (*FindAllMerchantTransaction) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{26}
+	return file_merchant_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *FindAllMerchantTransaction) GetPage() int32 {
@@ -1767,7 +1827,7 @@ type FindAllMerchantApikey struct {
 
 func (x *FindAllMerchantApikey) Reset() {
 	*x = FindAllMerchantApikey{}
-	mi := &file_merchant_proto_msgTypes[27]
+	mi := &file_merchant_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1779,7 +1839,7 @@ func (x *FindAllMerchantApikey) String() string {
 func (*FindAllMerchantApikey) ProtoMessage() {}
 
 func (x *FindAllMerchantApikey) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[27]
+	mi := &file_merchant_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1792,7 +1852,7 @@ func (x *FindAllMerchantApikey) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindAllMerchantApikey.ProtoReflect.Descriptor instead.
 func (*FindAllMerchantApikey) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{27}
+	return file_merchant_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *FindAllMerchantApikey) GetPage() int32 {
@@ -1832,7 +1892,7 @@ type FindByIdMerchantRequest struct {
 
 func (x *FindByIdMerchantRequest) Reset() {
 	*x = FindByIdMerchantRequest{}
-	mi := &file_merchant_proto_msgTypes[28]
+	mi := &file_merchant_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1844,7 +1904,7 @@ func (x *FindByIdMerchantRequest) String() string {
 func (*FindByIdMerchantRequest) ProtoMessage() {}
 
 func (x *FindByIdMerchantRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[28]
+	mi := &file_merchant_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1857,7 +1917,7 @@ func (x *FindByIdMerchantRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindByIdMerchantRequest.ProtoReflect.Descriptor instead.
 func (*FindByIdMerchantRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{28}
+	return file_merchant_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *FindByIdMerchantRequest) GetMerchantId() int32 {
@@ -1876,7 +1936,7 @@ type FindByApiKeyRequest struct {
 
 func (x *FindByApiKeyRequest) Reset() {
 	*x = FindByApiKeyRequest{}
-	mi := &file_merchant_proto_msgTypes[29]
+	mi := &file_merchant_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1888,7 +1948,7 @@ func (x *FindByApiKeyRequest) String() string {
 func (*FindByApiKeyRequest) ProtoMessage() {}
 
 func (x *FindByApiKeyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[29]
+	mi := &file_merchant_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1901,7 +1961,7 @@ func (x *FindByApiKeyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindByApiKeyRequest.ProtoReflect.Descriptor instead.
 func (*FindByApiKeyRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{29}
+	return file_merchant_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *FindByApiKeyRequest) GetApiKey() string {
@@ -1920,7 +1980,7 @@ type FindByMerchantUserIdRequest struct {
 
 func (x *FindByMerchantUserIdRequest) Reset() {
 	*x = FindByMerchantUserIdRequest{}
-	mi := &file_merchant_proto_msgTypes[30]
+	mi := &file_merchant_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1932,7 +1992,7 @@ func (x *FindByMerchantUserIdRequest) String() string {
 func (*FindByMerchantUserIdRequest) ProtoMessage() {}
 
 func (x *FindByMerchantUserIdRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[30]
+	mi := &file_merchant_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1945,7 +2005,7 @@ func (x *FindByMerchantUserIdRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindByMerchantUserIdRequest.ProtoReflect.Descriptor instead.
 func (*FindByMerchantUserIdRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{30}
+	return file_merchant_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *FindByMerchantUserIdRequest) GetUserId() int32 {
@@ -1964,7 +2024,7 @@ type TrashedMerchantRequest struct {
 
 func (x *TrashedMerchantRequest) Reset() {
 	*x = TrashedMerchantRequest{}
-	mi := &file_merchant_proto_msgTypes[31]
+	mi := &file_merchant_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1976,7 +2036,7 @@ func (x *TrashedMerchantRequest) String() string {
 func (*TrashedMerchantRequest) ProtoMessage() {}
 
 func (x *TrashedMerchantRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[31]
+	mi := &file_merchant_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1989,7 +2049,7 @@ func (x *TrashedMerchantRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TrashedMerchantRequest.ProtoReflect.Descriptor instead.
 func (*TrashedMerchantRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{31}
+	return file_merchant_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *TrashedMerchantRequest) GetMerchantId() int32 {
@@ -2008,7 +2068,7 @@ type RestoreMerchantRequest struct {
 
 func (x *RestoreMerchantRequest) Reset() {
 	*x = RestoreMerchantRequest{}
-	mi := &file_merchant_proto_msgTypes[32]
+	mi := &file_merchant_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2020,7 +2080,7 @@ func (x *RestoreMerchantRequest) String() string {
 func (*RestoreMerchantRequest) ProtoMessage() {}
 
 func (x *RestoreMerchantRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[32]
+	mi := &file_merchant_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2033,7 +2093,7 @@ func (x *RestoreMerchantRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RestoreMerchantRequest.ProtoReflect.Descriptor instead.
 func (*RestoreMerchantRequest) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{32}
+	return file_merchant_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *RestoreMerchantRequest) GetMerchantId() int32 {
@@ -2052,7 +2112,7 @@ type FindYearMerchant struct {
 
 func (x *FindYearMerchant) Reset() {
 	*x = FindYearMerchant{}
-	mi := &file_merchant_proto_msgTypes[33]
+	mi := &file_merchant_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2064,7 +2124,7 @@ func (x *FindYearMerchant) String() string {
 func (*FindYearMerchant) ProtoMessage() {}
 
 func (x *FindYearMerchant) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[33]
+	mi := &file_merchant_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2077,7 +2137,7 @@ func (x *FindYearMerchant) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindYearMerchant.ProtoReflect.Descriptor instead.
 func (*FindYearMerchant) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{33}
+	return file_merchant_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *FindYearMerchant) GetYear() int32 {
@@ -2097,7 +2157,7 @@ type FindYearMerchantById struct {
 
 func (x *FindYearMerchantById) Reset() {
 	*x = FindYearMerchantById{}
-	mi := &file_merchant_proto_msgTypes[34]
+	mi := &file_merchant_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2109,7 +2169,7 @@ func (x *FindYearMerchantById) String() string {
 func (*FindYearMerchantById) ProtoMessage() {}
 
 func (x *FindYearMerchantById) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[34]
+	mi := &file_merchant_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2122,7 +2182,7 @@ func (x *FindYearMerchantById) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindYearMerchantById.ProtoReflect.Descriptor instead.
 func (*FindYearMerchantById) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{34}
+	return file_merchant_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *FindYearMerchantById) GetYear() int32 {
@@ -2149,7 +2209,7 @@ type FindYearMerchantByApikey struct {
 
 func (x *FindYearMerchantByApikey) Reset() {
 	*x = FindYearMerchantByApikey{}
-	mi := &file_merchant_proto_msgTypes[35]
+	mi := &file_merchant_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2161,7 +2221,7 @@ func (x *FindYearMerchantByApikey) String() string {
 func (*FindYearMerchantByApikey) ProtoMessage() {}
 
 func (x *FindYearMerchantByApikey) ProtoReflect() protoreflect.Message {
-	mi := &file_merchant_proto_msgTypes[35]
+	mi := &file_merchant_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2174,7 +2234,7 @@ func (x *FindYearMerchantByApikey) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindYearMerchantByApikey.ProtoReflect.Descriptor instead.
 func (*FindYearMerchantByApikey) Descriptor() ([]byte, []int) {
-	return file_merchant_proto_rawDescGZIP(), []int{35}
+	return file_merchant_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *FindYearMerchantByApikey) GetYear() int32 {
@@ -2300,7 +2360,11 @@ const file_merchant_proto_rawDesc = "" +
 	"\x13ApiResponseMerchant\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12(\n" +
-	"\x04data\x18\x03 \x01(\v2\x14.pb.MerchantResponseR\x04data\"M\n" +
+	"\x04data\x18\x03 \x01(\v2\x14.pb.MerchantResponseR\x04data\"\x81\x01\n" +
+	"\x1bApiResponseMerchantDeleteAt\x12\x16\n" +
+	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage\x120\n" +
+	"\x04data\x18\x03 \x01(\v2\x1c.pb.MerchantResponseDeleteAtR\x04data\"M\n" +
 	"\x19ApiResponseMerchantDelete\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"J\n" +
@@ -2364,7 +2428,7 @@ const file_merchant_proto_rawDesc = "" +
 	"merchantId\"G\n" +
 	"\x18FindYearMerchantByApikey\x12\x12\n" +
 	"\x04year\x18\x01 \x01(\x05R\x04year\x12\x17\n" +
-	"\aapi_key\x18\x02 \x01(\tR\x06apiKey2\xf2\x19\n" +
+	"\aapi_key\x18\x02 \x01(\tR\x06apiKey2\x82\x1a\n" +
 	"\x0fMerchantService\x12R\n" +
 	"\x0fFindAllMerchant\x12\x1a.pb.FindAllMerchantRequest\x1a!.pb.ApiResponsePaginationMerchant\"\x00\x12J\n" +
 	"\x10FindByIdMerchant\x12\x1b.pb.FindByIdMerchantRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12B\n" +
@@ -2395,9 +2459,9 @@ const file_merchant_proto_rawDesc = "" +
 	"\rFindByTrashed\x12\x1a.pb.FindAllMerchantRequest\x1a).pb.ApiResponsePaginationMerchantDeleteAt\"\x00\x12F\n" +
 	"\x0eCreateMerchant\x12\x19.pb.CreateMerchantRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12F\n" +
 	"\x0eUpdateMerchant\x12\x19.pb.UpdateMerchantRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12R\n" +
-	"\x14UpdateMerchantStatus\x12\x1f.pb.UpdateMerchantStatusRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12I\n" +
-	"\x0fTrashedMerchant\x12\x1b.pb.FindByIdMerchantRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12I\n" +
-	"\x0fRestoreMerchant\x12\x1b.pb.FindByIdMerchantRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12W\n" +
+	"\x14UpdateMerchantStatus\x12\x1f.pb.UpdateMerchantStatusRequest\x1a\x17.pb.ApiResponseMerchant\"\x00\x12Q\n" +
+	"\x0fTrashedMerchant\x12\x1b.pb.FindByIdMerchantRequest\x1a\x1f.pb.ApiResponseMerchantDeleteAt\"\x00\x12Q\n" +
+	"\x0fRestoreMerchant\x12\x1b.pb.FindByIdMerchantRequest\x1a\x1f.pb.ApiResponseMerchantDeleteAt\"\x00\x12W\n" +
 	"\x17DeleteMerchantPermanent\x12\x1b.pb.FindByIdMerchantRequest\x1a\x1d.pb.ApiResponseMerchantDelete\"\x00\x12J\n" +
 	"\x12RestoreAllMerchant\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00\x12R\n" +
 	"\x1aDeleteAllMerchantPermanent\x12\x16.google.protobuf.Empty\x1a\x1a.pb.ApiResponseMerchantAll\"\x00B;Z9github.com/MamangRust/monolith-graphql-payment-gateway-pbb\x06proto3"
@@ -2414,7 +2478,7 @@ func file_merchant_proto_rawDescGZIP() []byte {
 	return file_merchant_proto_rawDescData
 }
 
-var file_merchant_proto_msgTypes = make([]protoimpl.MessageInfo, 36)
+var file_merchant_proto_msgTypes = make([]protoimpl.MessageInfo, 37)
 var file_merchant_proto_goTypes = []any{
 	(*CreateMerchantRequest)(nil),                    // 0: pb.CreateMerchantRequest
 	(*UpdateMerchantRequest)(nil),                    // 1: pb.UpdateMerchantRequest
@@ -2436,29 +2500,30 @@ var file_merchant_proto_goTypes = []any{
 	(*ApiResponseMerchantYearlyTotalAmount)(nil),     // 17: pb.ApiResponseMerchantYearlyTotalAmount
 	(*ApiResponsesMerchant)(nil),                     // 18: pb.ApiResponsesMerchant
 	(*ApiResponseMerchant)(nil),                      // 19: pb.ApiResponseMerchant
-	(*ApiResponseMerchantDelete)(nil),                // 20: pb.ApiResponseMerchantDelete
-	(*ApiResponseMerchantAll)(nil),                   // 21: pb.ApiResponseMerchantAll
-	(*ApiResponsePaginationMerchant)(nil),            // 22: pb.ApiResponsePaginationMerchant
-	(*ApiResponsePaginationMerchantDeleteAt)(nil),    // 23: pb.ApiResponsePaginationMerchantDeleteAt
-	(*ApiResponsePaginationMerchantTransaction)(nil), // 24: pb.ApiResponsePaginationMerchantTransaction
-	(*FindAllMerchantRequest)(nil),                   // 25: pb.FindAllMerchantRequest
-	(*FindAllMerchantTransaction)(nil),               // 26: pb.FindAllMerchantTransaction
-	(*FindAllMerchantApikey)(nil),                    // 27: pb.FindAllMerchantApikey
-	(*FindByIdMerchantRequest)(nil),                  // 28: pb.FindByIdMerchantRequest
-	(*FindByApiKeyRequest)(nil),                      // 29: pb.FindByApiKeyRequest
-	(*FindByMerchantUserIdRequest)(nil),              // 30: pb.FindByMerchantUserIdRequest
-	(*TrashedMerchantRequest)(nil),                   // 31: pb.TrashedMerchantRequest
-	(*RestoreMerchantRequest)(nil),                   // 32: pb.RestoreMerchantRequest
-	(*FindYearMerchant)(nil),                         // 33: pb.FindYearMerchant
-	(*FindYearMerchantById)(nil),                     // 34: pb.FindYearMerchantById
-	(*FindYearMerchantByApikey)(nil),                 // 35: pb.FindYearMerchantByApikey
-	(*wrapperspb.StringValue)(nil),                   // 36: google.protobuf.StringValue
-	(*PaginationMeta)(nil),                           // 37: pb.PaginationMeta
-	(*emptypb.Empty)(nil),                            // 38: google.protobuf.Empty
+	(*ApiResponseMerchantDeleteAt)(nil),              // 20: pb.ApiResponseMerchantDeleteAt
+	(*ApiResponseMerchantDelete)(nil),                // 21: pb.ApiResponseMerchantDelete
+	(*ApiResponseMerchantAll)(nil),                   // 22: pb.ApiResponseMerchantAll
+	(*ApiResponsePaginationMerchant)(nil),            // 23: pb.ApiResponsePaginationMerchant
+	(*ApiResponsePaginationMerchantDeleteAt)(nil),    // 24: pb.ApiResponsePaginationMerchantDeleteAt
+	(*ApiResponsePaginationMerchantTransaction)(nil), // 25: pb.ApiResponsePaginationMerchantTransaction
+	(*FindAllMerchantRequest)(nil),                   // 26: pb.FindAllMerchantRequest
+	(*FindAllMerchantTransaction)(nil),               // 27: pb.FindAllMerchantTransaction
+	(*FindAllMerchantApikey)(nil),                    // 28: pb.FindAllMerchantApikey
+	(*FindByIdMerchantRequest)(nil),                  // 29: pb.FindByIdMerchantRequest
+	(*FindByApiKeyRequest)(nil),                      // 30: pb.FindByApiKeyRequest
+	(*FindByMerchantUserIdRequest)(nil),              // 31: pb.FindByMerchantUserIdRequest
+	(*TrashedMerchantRequest)(nil),                   // 32: pb.TrashedMerchantRequest
+	(*RestoreMerchantRequest)(nil),                   // 33: pb.RestoreMerchantRequest
+	(*FindYearMerchant)(nil),                         // 34: pb.FindYearMerchant
+	(*FindYearMerchantById)(nil),                     // 35: pb.FindYearMerchantById
+	(*FindYearMerchantByApikey)(nil),                 // 36: pb.FindYearMerchantByApikey
+	(*wrapperspb.StringValue)(nil),                   // 37: google.protobuf.StringValue
+	(*PaginationMeta)(nil),                           // 38: pb.PaginationMeta
+	(*emptypb.Empty)(nil),                            // 39: google.protobuf.Empty
 }
 var file_merchant_proto_depIdxs = []int32{
-	36, // 0: pb.MerchantResponseDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
-	36, // 1: pb.MerchantTransactionResponse.deleted_at:type_name -> google.protobuf.StringValue
+	37, // 0: pb.MerchantResponseDeleteAt.deleted_at:type_name -> google.protobuf.StringValue
+	37, // 1: pb.MerchantTransactionResponse.deleted_at:type_name -> google.protobuf.StringValue
 	6,  // 2: pb.ApiResponseMerchantMonthlyPaymentMethod.data:type_name -> pb.MerchantResponseMonthlyPaymentMethod
 	7,  // 3: pb.ApiResponseMerchantYearlyPaymentMethod.data:type_name -> pb.MerchantResponseYearlyPaymentMethod
 	8,  // 4: pb.ApiResponseMerchantMonthlyAmount.data:type_name -> pb.MerchantResponseMonthlyAmount
@@ -2467,87 +2532,88 @@ var file_merchant_proto_depIdxs = []int32{
 	11, // 7: pb.ApiResponseMerchantYearlyTotalAmount.data:type_name -> pb.MerchantResponseYearlyTotalAmount
 	3,  // 8: pb.ApiResponsesMerchant.data:type_name -> pb.MerchantResponse
 	3,  // 9: pb.ApiResponseMerchant.data:type_name -> pb.MerchantResponse
-	3,  // 10: pb.ApiResponsePaginationMerchant.data:type_name -> pb.MerchantResponse
-	37, // 11: pb.ApiResponsePaginationMerchant.pagination:type_name -> pb.PaginationMeta
-	4,  // 12: pb.ApiResponsePaginationMerchantDeleteAt.data:type_name -> pb.MerchantResponseDeleteAt
-	37, // 13: pb.ApiResponsePaginationMerchantDeleteAt.pagination:type_name -> pb.PaginationMeta
-	5,  // 14: pb.ApiResponsePaginationMerchantTransaction.data:type_name -> pb.MerchantTransactionResponse
-	37, // 15: pb.ApiResponsePaginationMerchantTransaction.pagination:type_name -> pb.PaginationMeta
-	25, // 16: pb.MerchantService.FindAllMerchant:input_type -> pb.FindAllMerchantRequest
-	28, // 17: pb.MerchantService.FindByIdMerchant:input_type -> pb.FindByIdMerchantRequest
-	29, // 18: pb.MerchantService.FindByApiKey:input_type -> pb.FindByApiKeyRequest
-	25, // 19: pb.MerchantService.FindAllTransactionMerchant:input_type -> pb.FindAllMerchantRequest
-	33, // 20: pb.MerchantService.FindMonthlyPaymentMethodsMerchant:input_type -> pb.FindYearMerchant
-	33, // 21: pb.MerchantService.FindYearlyPaymentMethodMerchant:input_type -> pb.FindYearMerchant
-	33, // 22: pb.MerchantService.FindMonthlyAmountMerchant:input_type -> pb.FindYearMerchant
-	33, // 23: pb.MerchantService.FindYearlyAmountMerchant:input_type -> pb.FindYearMerchant
-	33, // 24: pb.MerchantService.FindMonthlyTotalAmountMerchant:input_type -> pb.FindYearMerchant
-	33, // 25: pb.MerchantService.FindYearlyTotalAmountMerchant:input_type -> pb.FindYearMerchant
-	26, // 26: pb.MerchantService.FindAllTransactionByMerchant:input_type -> pb.FindAllMerchantTransaction
-	34, // 27: pb.MerchantService.FindMonthlyPaymentMethodByMerchants:input_type -> pb.FindYearMerchantById
-	34, // 28: pb.MerchantService.FindYearlyPaymentMethodByMerchants:input_type -> pb.FindYearMerchantById
-	34, // 29: pb.MerchantService.FindMonthlyAmountByMerchants:input_type -> pb.FindYearMerchantById
-	34, // 30: pb.MerchantService.FindYearlyAmountByMerchants:input_type -> pb.FindYearMerchantById
-	34, // 31: pb.MerchantService.FindMonthlyTotalAmountByMerchants:input_type -> pb.FindYearMerchantById
-	34, // 32: pb.MerchantService.FindYearlyTotalAmountByMerchants:input_type -> pb.FindYearMerchantById
-	27, // 33: pb.MerchantService.FindAllTransactionByApikey:input_type -> pb.FindAllMerchantApikey
-	35, // 34: pb.MerchantService.FindMonthlyPaymentMethodByApikey:input_type -> pb.FindYearMerchantByApikey
-	35, // 35: pb.MerchantService.FindYearlyPaymentMethodByApikey:input_type -> pb.FindYearMerchantByApikey
-	35, // 36: pb.MerchantService.FindMonthlyAmountByApikey:input_type -> pb.FindYearMerchantByApikey
-	35, // 37: pb.MerchantService.FindYearlyAmountByApikey:input_type -> pb.FindYearMerchantByApikey
-	35, // 38: pb.MerchantService.FindMonthlyTotalAmountByApikey:input_type -> pb.FindYearMerchantByApikey
-	35, // 39: pb.MerchantService.FindYearlyTotalAmountByApikey:input_type -> pb.FindYearMerchantByApikey
-	30, // 40: pb.MerchantService.FindByMerchantUserId:input_type -> pb.FindByMerchantUserIdRequest
-	25, // 41: pb.MerchantService.FindByActive:input_type -> pb.FindAllMerchantRequest
-	25, // 42: pb.MerchantService.FindByTrashed:input_type -> pb.FindAllMerchantRequest
-	0,  // 43: pb.MerchantService.CreateMerchant:input_type -> pb.CreateMerchantRequest
-	1,  // 44: pb.MerchantService.UpdateMerchant:input_type -> pb.UpdateMerchantRequest
-	2,  // 45: pb.MerchantService.UpdateMerchantStatus:input_type -> pb.UpdateMerchantStatusRequest
-	28, // 46: pb.MerchantService.TrashedMerchant:input_type -> pb.FindByIdMerchantRequest
-	28, // 47: pb.MerchantService.RestoreMerchant:input_type -> pb.FindByIdMerchantRequest
-	28, // 48: pb.MerchantService.DeleteMerchantPermanent:input_type -> pb.FindByIdMerchantRequest
-	38, // 49: pb.MerchantService.RestoreAllMerchant:input_type -> google.protobuf.Empty
-	38, // 50: pb.MerchantService.DeleteAllMerchantPermanent:input_type -> google.protobuf.Empty
-	22, // 51: pb.MerchantService.FindAllMerchant:output_type -> pb.ApiResponsePaginationMerchant
-	19, // 52: pb.MerchantService.FindByIdMerchant:output_type -> pb.ApiResponseMerchant
-	19, // 53: pb.MerchantService.FindByApiKey:output_type -> pb.ApiResponseMerchant
-	24, // 54: pb.MerchantService.FindAllTransactionMerchant:output_type -> pb.ApiResponsePaginationMerchantTransaction
-	12, // 55: pb.MerchantService.FindMonthlyPaymentMethodsMerchant:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
-	13, // 56: pb.MerchantService.FindYearlyPaymentMethodMerchant:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
-	14, // 57: pb.MerchantService.FindMonthlyAmountMerchant:output_type -> pb.ApiResponseMerchantMonthlyAmount
-	15, // 58: pb.MerchantService.FindYearlyAmountMerchant:output_type -> pb.ApiResponseMerchantYearlyAmount
-	16, // 59: pb.MerchantService.FindMonthlyTotalAmountMerchant:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
-	17, // 60: pb.MerchantService.FindYearlyTotalAmountMerchant:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
-	24, // 61: pb.MerchantService.FindAllTransactionByMerchant:output_type -> pb.ApiResponsePaginationMerchantTransaction
-	12, // 62: pb.MerchantService.FindMonthlyPaymentMethodByMerchants:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
-	13, // 63: pb.MerchantService.FindYearlyPaymentMethodByMerchants:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
-	14, // 64: pb.MerchantService.FindMonthlyAmountByMerchants:output_type -> pb.ApiResponseMerchantMonthlyAmount
-	15, // 65: pb.MerchantService.FindYearlyAmountByMerchants:output_type -> pb.ApiResponseMerchantYearlyAmount
-	16, // 66: pb.MerchantService.FindMonthlyTotalAmountByMerchants:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
-	17, // 67: pb.MerchantService.FindYearlyTotalAmountByMerchants:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
-	24, // 68: pb.MerchantService.FindAllTransactionByApikey:output_type -> pb.ApiResponsePaginationMerchantTransaction
-	12, // 69: pb.MerchantService.FindMonthlyPaymentMethodByApikey:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
-	13, // 70: pb.MerchantService.FindYearlyPaymentMethodByApikey:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
-	14, // 71: pb.MerchantService.FindMonthlyAmountByApikey:output_type -> pb.ApiResponseMerchantMonthlyAmount
-	15, // 72: pb.MerchantService.FindYearlyAmountByApikey:output_type -> pb.ApiResponseMerchantYearlyAmount
-	16, // 73: pb.MerchantService.FindMonthlyTotalAmountByApikey:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
-	17, // 74: pb.MerchantService.FindYearlyTotalAmountByApikey:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
-	18, // 75: pb.MerchantService.FindByMerchantUserId:output_type -> pb.ApiResponsesMerchant
-	23, // 76: pb.MerchantService.FindByActive:output_type -> pb.ApiResponsePaginationMerchantDeleteAt
-	23, // 77: pb.MerchantService.FindByTrashed:output_type -> pb.ApiResponsePaginationMerchantDeleteAt
-	19, // 78: pb.MerchantService.CreateMerchant:output_type -> pb.ApiResponseMerchant
-	19, // 79: pb.MerchantService.UpdateMerchant:output_type -> pb.ApiResponseMerchant
-	19, // 80: pb.MerchantService.UpdateMerchantStatus:output_type -> pb.ApiResponseMerchant
-	19, // 81: pb.MerchantService.TrashedMerchant:output_type -> pb.ApiResponseMerchant
-	19, // 82: pb.MerchantService.RestoreMerchant:output_type -> pb.ApiResponseMerchant
-	20, // 83: pb.MerchantService.DeleteMerchantPermanent:output_type -> pb.ApiResponseMerchantDelete
-	21, // 84: pb.MerchantService.RestoreAllMerchant:output_type -> pb.ApiResponseMerchantAll
-	21, // 85: pb.MerchantService.DeleteAllMerchantPermanent:output_type -> pb.ApiResponseMerchantAll
-	51, // [51:86] is the sub-list for method output_type
-	16, // [16:51] is the sub-list for method input_type
-	16, // [16:16] is the sub-list for extension type_name
-	16, // [16:16] is the sub-list for extension extendee
-	0,  // [0:16] is the sub-list for field type_name
+	4,  // 10: pb.ApiResponseMerchantDeleteAt.data:type_name -> pb.MerchantResponseDeleteAt
+	3,  // 11: pb.ApiResponsePaginationMerchant.data:type_name -> pb.MerchantResponse
+	38, // 12: pb.ApiResponsePaginationMerchant.pagination:type_name -> pb.PaginationMeta
+	4,  // 13: pb.ApiResponsePaginationMerchantDeleteAt.data:type_name -> pb.MerchantResponseDeleteAt
+	38, // 14: pb.ApiResponsePaginationMerchantDeleteAt.pagination:type_name -> pb.PaginationMeta
+	5,  // 15: pb.ApiResponsePaginationMerchantTransaction.data:type_name -> pb.MerchantTransactionResponse
+	38, // 16: pb.ApiResponsePaginationMerchantTransaction.pagination:type_name -> pb.PaginationMeta
+	26, // 17: pb.MerchantService.FindAllMerchant:input_type -> pb.FindAllMerchantRequest
+	29, // 18: pb.MerchantService.FindByIdMerchant:input_type -> pb.FindByIdMerchantRequest
+	30, // 19: pb.MerchantService.FindByApiKey:input_type -> pb.FindByApiKeyRequest
+	26, // 20: pb.MerchantService.FindAllTransactionMerchant:input_type -> pb.FindAllMerchantRequest
+	34, // 21: pb.MerchantService.FindMonthlyPaymentMethodsMerchant:input_type -> pb.FindYearMerchant
+	34, // 22: pb.MerchantService.FindYearlyPaymentMethodMerchant:input_type -> pb.FindYearMerchant
+	34, // 23: pb.MerchantService.FindMonthlyAmountMerchant:input_type -> pb.FindYearMerchant
+	34, // 24: pb.MerchantService.FindYearlyAmountMerchant:input_type -> pb.FindYearMerchant
+	34, // 25: pb.MerchantService.FindMonthlyTotalAmountMerchant:input_type -> pb.FindYearMerchant
+	34, // 26: pb.MerchantService.FindYearlyTotalAmountMerchant:input_type -> pb.FindYearMerchant
+	27, // 27: pb.MerchantService.FindAllTransactionByMerchant:input_type -> pb.FindAllMerchantTransaction
+	35, // 28: pb.MerchantService.FindMonthlyPaymentMethodByMerchants:input_type -> pb.FindYearMerchantById
+	35, // 29: pb.MerchantService.FindYearlyPaymentMethodByMerchants:input_type -> pb.FindYearMerchantById
+	35, // 30: pb.MerchantService.FindMonthlyAmountByMerchants:input_type -> pb.FindYearMerchantById
+	35, // 31: pb.MerchantService.FindYearlyAmountByMerchants:input_type -> pb.FindYearMerchantById
+	35, // 32: pb.MerchantService.FindMonthlyTotalAmountByMerchants:input_type -> pb.FindYearMerchantById
+	35, // 33: pb.MerchantService.FindYearlyTotalAmountByMerchants:input_type -> pb.FindYearMerchantById
+	28, // 34: pb.MerchantService.FindAllTransactionByApikey:input_type -> pb.FindAllMerchantApikey
+	36, // 35: pb.MerchantService.FindMonthlyPaymentMethodByApikey:input_type -> pb.FindYearMerchantByApikey
+	36, // 36: pb.MerchantService.FindYearlyPaymentMethodByApikey:input_type -> pb.FindYearMerchantByApikey
+	36, // 37: pb.MerchantService.FindMonthlyAmountByApikey:input_type -> pb.FindYearMerchantByApikey
+	36, // 38: pb.MerchantService.FindYearlyAmountByApikey:input_type -> pb.FindYearMerchantByApikey
+	36, // 39: pb.MerchantService.FindMonthlyTotalAmountByApikey:input_type -> pb.FindYearMerchantByApikey
+	36, // 40: pb.MerchantService.FindYearlyTotalAmountByApikey:input_type -> pb.FindYearMerchantByApikey
+	31, // 41: pb.MerchantService.FindByMerchantUserId:input_type -> pb.FindByMerchantUserIdRequest
+	26, // 42: pb.MerchantService.FindByActive:input_type -> pb.FindAllMerchantRequest
+	26, // 43: pb.MerchantService.FindByTrashed:input_type -> pb.FindAllMerchantRequest
+	0,  // 44: pb.MerchantService.CreateMerchant:input_type -> pb.CreateMerchantRequest
+	1,  // 45: pb.MerchantService.UpdateMerchant:input_type -> pb.UpdateMerchantRequest
+	2,  // 46: pb.MerchantService.UpdateMerchantStatus:input_type -> pb.UpdateMerchantStatusRequest
+	29, // 47: pb.MerchantService.TrashedMerchant:input_type -> pb.FindByIdMerchantRequest
+	29, // 48: pb.MerchantService.RestoreMerchant:input_type -> pb.FindByIdMerchantRequest
+	29, // 49: pb.MerchantService.DeleteMerchantPermanent:input_type -> pb.FindByIdMerchantRequest
+	39, // 50: pb.MerchantService.RestoreAllMerchant:input_type -> google.protobuf.Empty
+	39, // 51: pb.MerchantService.DeleteAllMerchantPermanent:input_type -> google.protobuf.Empty
+	23, // 52: pb.MerchantService.FindAllMerchant:output_type -> pb.ApiResponsePaginationMerchant
+	19, // 53: pb.MerchantService.FindByIdMerchant:output_type -> pb.ApiResponseMerchant
+	19, // 54: pb.MerchantService.FindByApiKey:output_type -> pb.ApiResponseMerchant
+	25, // 55: pb.MerchantService.FindAllTransactionMerchant:output_type -> pb.ApiResponsePaginationMerchantTransaction
+	12, // 56: pb.MerchantService.FindMonthlyPaymentMethodsMerchant:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
+	13, // 57: pb.MerchantService.FindYearlyPaymentMethodMerchant:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
+	14, // 58: pb.MerchantService.FindMonthlyAmountMerchant:output_type -> pb.ApiResponseMerchantMonthlyAmount
+	15, // 59: pb.MerchantService.FindYearlyAmountMerchant:output_type -> pb.ApiResponseMerchantYearlyAmount
+	16, // 60: pb.MerchantService.FindMonthlyTotalAmountMerchant:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
+	17, // 61: pb.MerchantService.FindYearlyTotalAmountMerchant:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
+	25, // 62: pb.MerchantService.FindAllTransactionByMerchant:output_type -> pb.ApiResponsePaginationMerchantTransaction
+	12, // 63: pb.MerchantService.FindMonthlyPaymentMethodByMerchants:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
+	13, // 64: pb.MerchantService.FindYearlyPaymentMethodByMerchants:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
+	14, // 65: pb.MerchantService.FindMonthlyAmountByMerchants:output_type -> pb.ApiResponseMerchantMonthlyAmount
+	15, // 66: pb.MerchantService.FindYearlyAmountByMerchants:output_type -> pb.ApiResponseMerchantYearlyAmount
+	16, // 67: pb.MerchantService.FindMonthlyTotalAmountByMerchants:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
+	17, // 68: pb.MerchantService.FindYearlyTotalAmountByMerchants:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
+	25, // 69: pb.MerchantService.FindAllTransactionByApikey:output_type -> pb.ApiResponsePaginationMerchantTransaction
+	12, // 70: pb.MerchantService.FindMonthlyPaymentMethodByApikey:output_type -> pb.ApiResponseMerchantMonthlyPaymentMethod
+	13, // 71: pb.MerchantService.FindYearlyPaymentMethodByApikey:output_type -> pb.ApiResponseMerchantYearlyPaymentMethod
+	14, // 72: pb.MerchantService.FindMonthlyAmountByApikey:output_type -> pb.ApiResponseMerchantMonthlyAmount
+	15, // 73: pb.MerchantService.FindYearlyAmountByApikey:output_type -> pb.ApiResponseMerchantYearlyAmount
+	16, // 74: pb.MerchantService.FindMonthlyTotalAmountByApikey:output_type -> pb.ApiResponseMerchantMonthlyTotalAmount
+	17, // 75: pb.MerchantService.FindYearlyTotalAmountByApikey:output_type -> pb.ApiResponseMerchantYearlyTotalAmount
+	18, // 76: pb.MerchantService.FindByMerchantUserId:output_type -> pb.ApiResponsesMerchant
+	24, // 77: pb.MerchantService.FindByActive:output_type -> pb.ApiResponsePaginationMerchantDeleteAt
+	24, // 78: pb.MerchantService.FindByTrashed:output_type -> pb.ApiResponsePaginationMerchantDeleteAt
+	19, // 79: pb.MerchantService.CreateMerchant:output_type -> pb.ApiResponseMerchant
+	19, // 80: pb.MerchantService.UpdateMerchant:output_type -> pb.ApiResponseMerchant
+	19, // 81: pb.MerchantService.UpdateMerchantStatus:output_type -> pb.ApiResponseMerchant
+	20, // 82: pb.MerchantService.TrashedMerchant:output_type -> pb.ApiResponseMerchantDeleteAt
+	20, // 83: pb.MerchantService.RestoreMerchant:output_type -> pb.ApiResponseMerchantDeleteAt
+	21, // 84: pb.MerchantService.DeleteMerchantPermanent:output_type -> pb.ApiResponseMerchantDelete
+	22, // 85: pb.MerchantService.RestoreAllMerchant:output_type -> pb.ApiResponseMerchantAll
+	22, // 86: pb.MerchantService.DeleteAllMerchantPermanent:output_type -> pb.ApiResponseMerchantAll
+	52, // [52:87] is the sub-list for method output_type
+	17, // [17:52] is the sub-list for method input_type
+	17, // [17:17] is the sub-list for extension type_name
+	17, // [17:17] is the sub-list for extension extendee
+	0,  // [0:17] is the sub-list for field type_name
 }
 
 func init() { file_merchant_proto_init() }
@@ -2562,7 +2628,7 @@ func file_merchant_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_merchant_proto_rawDesc), len(file_merchant_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   36,
+			NumMessages:   37,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

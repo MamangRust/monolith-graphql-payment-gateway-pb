@@ -45,8 +45,8 @@ type MerchantDocumentServiceClient interface {
 	Create(ctx context.Context, in *CreateMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error)
 	Update(ctx context.Context, in *UpdateMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error)
 	UpdateStatus(ctx context.Context, in *UpdateMerchantDocumentStatusRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error)
-	Trashed(ctx context.Context, in *TrashedMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error)
-	Restore(ctx context.Context, in *RestoreMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error)
+	Trashed(ctx context.Context, in *TrashedMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentDeleteAt, error)
+	Restore(ctx context.Context, in *RestoreMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentDeleteAt, error)
 	DeletePermanent(ctx context.Context, in *DeleteMerchantDocumentPermanentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentDelete, error)
 	RestoreAll(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentAll, error)
 	DeleteAllPermanent(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentAll, error)
@@ -130,9 +130,9 @@ func (c *merchantDocumentServiceClient) UpdateStatus(ctx context.Context, in *Up
 	return out, nil
 }
 
-func (c *merchantDocumentServiceClient) Trashed(ctx context.Context, in *TrashedMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error) {
+func (c *merchantDocumentServiceClient) Trashed(ctx context.Context, in *TrashedMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseMerchantDocument)
+	out := new(ApiResponseMerchantDocumentDeleteAt)
 	err := c.cc.Invoke(ctx, MerchantDocumentService_Trashed_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -140,9 +140,9 @@ func (c *merchantDocumentServiceClient) Trashed(ctx context.Context, in *Trashed
 	return out, nil
 }
 
-func (c *merchantDocumentServiceClient) Restore(ctx context.Context, in *RestoreMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocument, error) {
+func (c *merchantDocumentServiceClient) Restore(ctx context.Context, in *RestoreMerchantDocumentRequest, opts ...grpc.CallOption) (*ApiResponseMerchantDocumentDeleteAt, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ApiResponseMerchantDocument)
+	out := new(ApiResponseMerchantDocumentDeleteAt)
 	err := c.cc.Invoke(ctx, MerchantDocumentService_Restore_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -191,8 +191,8 @@ type MerchantDocumentServiceServer interface {
 	Create(context.Context, *CreateMerchantDocumentRequest) (*ApiResponseMerchantDocument, error)
 	Update(context.Context, *UpdateMerchantDocumentRequest) (*ApiResponseMerchantDocument, error)
 	UpdateStatus(context.Context, *UpdateMerchantDocumentStatusRequest) (*ApiResponseMerchantDocument, error)
-	Trashed(context.Context, *TrashedMerchantDocumentRequest) (*ApiResponseMerchantDocument, error)
-	Restore(context.Context, *RestoreMerchantDocumentRequest) (*ApiResponseMerchantDocument, error)
+	Trashed(context.Context, *TrashedMerchantDocumentRequest) (*ApiResponseMerchantDocumentDeleteAt, error)
+	Restore(context.Context, *RestoreMerchantDocumentRequest) (*ApiResponseMerchantDocumentDeleteAt, error)
 	DeletePermanent(context.Context, *DeleteMerchantDocumentPermanentRequest) (*ApiResponseMerchantDocumentDelete, error)
 	RestoreAll(context.Context, *emptypb.Empty) (*ApiResponseMerchantDocumentAll, error)
 	DeleteAllPermanent(context.Context, *emptypb.Empty) (*ApiResponseMerchantDocumentAll, error)
@@ -227,10 +227,10 @@ func (UnimplementedMerchantDocumentServiceServer) Update(context.Context, *Updat
 func (UnimplementedMerchantDocumentServiceServer) UpdateStatus(context.Context, *UpdateMerchantDocumentStatusRequest) (*ApiResponseMerchantDocument, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateStatus not implemented")
 }
-func (UnimplementedMerchantDocumentServiceServer) Trashed(context.Context, *TrashedMerchantDocumentRequest) (*ApiResponseMerchantDocument, error) {
+func (UnimplementedMerchantDocumentServiceServer) Trashed(context.Context, *TrashedMerchantDocumentRequest) (*ApiResponseMerchantDocumentDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Trashed not implemented")
 }
-func (UnimplementedMerchantDocumentServiceServer) Restore(context.Context, *RestoreMerchantDocumentRequest) (*ApiResponseMerchantDocument, error) {
+func (UnimplementedMerchantDocumentServiceServer) Restore(context.Context, *RestoreMerchantDocumentRequest) (*ApiResponseMerchantDocumentDeleteAt, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Restore not implemented")
 }
 func (UnimplementedMerchantDocumentServiceServer) DeletePermanent(context.Context, *DeleteMerchantDocumentPermanentRequest) (*ApiResponseMerchantDocumentDelete, error) {
