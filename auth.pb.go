@@ -7,6 +7,7 @@
 package monolith_graphql_payment_gateway_pb
 
 import (
+	user "github.com/MamangRust/monolith-graphql-payment-gateway-pb/user"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -717,7 +718,7 @@ type ApiResponseRegister struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
 	Message       string                 `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
-	Data          *UserResponse          `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	Data          *user.UserResponse     `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -766,7 +767,7 @@ func (x *ApiResponseRegister) GetMessage() string {
 	return ""
 }
 
-func (x *ApiResponseRegister) GetData() *UserResponse {
+func (x *ApiResponseRegister) GetData() *user.UserResponse {
 	if x != nil {
 		return x.Data
 	}
@@ -777,7 +778,7 @@ type ApiResponseGetMe struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
 	Message       string                 `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
-	Data          *UserResponse          `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	Data          *user.UserResponse     `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -826,7 +827,7 @@ func (x *ApiResponseGetMe) GetMessage() string {
 	return ""
 }
 
-func (x *ApiResponseGetMe) GetData() *UserResponse {
+func (x *ApiResponseGetMe) GetData() *user.UserResponse {
 	if x != nil {
 		return x.Data
 	}
@@ -838,8 +839,7 @@ var File_auth_proto protoreflect.FileDescriptor
 const file_auth_proto_rawDesc = "" +
 	"\n" +
 	"\n" +
-	"auth.proto\x12\x02pb\x1a\n" +
-	"user.proto\"\xa8\x01\n" +
+	"auth.proto\x12\x02pb\x1a\x0fuser/user.proto\"\xa8\x01\n" +
 	"\x0fRegisterRequest\x12\x1c\n" +
 	"\tfirstname\x18\x01 \x01(\tR\tfirstname\x12\x1a\n" +
 	"\blastname\x18\x02 \x01(\tR\blastname\x12\x14\n" +
@@ -881,15 +881,15 @@ const file_auth_proto_rawDesc = "" +
 	"\x17ApiResponseRefreshToken\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\x12%\n" +
-	"\x04data\x18\x03 \x01(\v2\x11.pb.TokenResponseR\x04data\"m\n" +
+	"\x04data\x18\x03 \x01(\v2\x11.pb.TokenResponseR\x04data\"r\n" +
 	"\x13ApiResponseRegister\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage\x12$\n" +
-	"\x04data\x18\x03 \x01(\v2\x10.pb.UserResponseR\x04data\"j\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage\x12)\n" +
+	"\x04data\x18\x03 \x01(\v2\x15.pb.user.UserResponseR\x04data\"o\n" +
 	"\x10ApiResponseGetMe\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage\x12$\n" +
-	"\x04data\x18\x03 \x01(\v2\x10.pb.UserResponseR\x04data2\xda\x03\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage\x12)\n" +
+	"\x04data\x18\x03 \x01(\v2\x15.pb.user.UserResponseR\x04data2\xda\x03\n" +
 	"\vAuthService\x12@\n" +
 	"\n" +
 	"VerifyCode\x12\x15.pb.VerifyCodeRequest\x1a\x19.pb.ApiResponseVerifyCode\"\x00\x12L\n" +
@@ -929,13 +929,13 @@ var file_auth_proto_goTypes = []any{
 	(*ApiResponseRefreshToken)(nil),   // 12: pb.ApiResponseRefreshToken
 	(*ApiResponseRegister)(nil),       // 13: pb.ApiResponseRegister
 	(*ApiResponseGetMe)(nil),          // 14: pb.ApiResponseGetMe
-	(*UserResponse)(nil),              // 15: pb.UserResponse
+	(*user.UserResponse)(nil),         // 15: pb.user.UserResponse
 }
 var file_auth_proto_depIdxs = []int32{
 	7,  // 0: pb.ApiResponseLogin.data:type_name -> pb.TokenResponse
 	7,  // 1: pb.ApiResponseRefreshToken.data:type_name -> pb.TokenResponse
-	15, // 2: pb.ApiResponseRegister.data:type_name -> pb.UserResponse
-	15, // 3: pb.ApiResponseGetMe.data:type_name -> pb.UserResponse
+	15, // 2: pb.ApiResponseRegister.data:type_name -> pb.user.UserResponse
+	15, // 3: pb.ApiResponseGetMe.data:type_name -> pb.user.UserResponse
 	2,  // 4: pb.AuthService.VerifyCode:input_type -> pb.VerifyCodeRequest
 	3,  // 5: pb.AuthService.ForgotPassword:input_type -> pb.ForgotPasswordRequest
 	4,  // 6: pb.AuthService.ResetPassword:input_type -> pb.ResetPasswordRequest
@@ -962,7 +962,6 @@ func file_auth_proto_init() {
 	if File_auth_proto != nil {
 		return
 	}
-	file_user_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
