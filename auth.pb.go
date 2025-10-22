@@ -344,7 +344,7 @@ func (x *RefreshTokenRequest) GetRefreshToken() string {
 
 type GetMeRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	AccessToken   string                 `protobuf:"bytes,1,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
+	UserId        int32                  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -379,11 +379,11 @@ func (*GetMeRequest) Descriptor() ([]byte, []int) {
 	return file_auth_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *GetMeRequest) GetAccessToken() string {
+func (x *GetMeRequest) GetUserId() int32 {
 	if x != nil {
-		return x.AccessToken
+		return x.UserId
 	}
-	return ""
+	return 0
 }
 
 type TokenResponse struct {
@@ -859,9 +859,9 @@ const file_auth_proto_rawDesc = "" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12)\n" +
 	"\x10confirm_password\x18\x03 \x01(\tR\x0fconfirmPassword\":\n" +
 	"\x13RefreshTokenRequest\x12#\n" +
-	"\rrefresh_token\x18\x01 \x01(\tR\frefreshToken\"1\n" +
-	"\fGetMeRequest\x12!\n" +
-	"\faccess_token\x18\x01 \x01(\tR\vaccessToken\"W\n" +
+	"\rrefresh_token\x18\x01 \x01(\tR\frefreshToken\"&\n" +
+	"\fGetMeRequest\x12\x16\n" +
+	"\x06userId\x18\x01 \x01(\x05R\x06userId\"W\n" +
 	"\rTokenResponse\x12!\n" +
 	"\faccess_token\x18\x01 \x01(\tR\vaccessToken\x12#\n" +
 	"\rrefresh_token\x18\x02 \x01(\tR\frefreshToken\"I\n" +
