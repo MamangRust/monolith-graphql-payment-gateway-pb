@@ -276,12 +276,12 @@ const file_transfer_transfer_command_proto_rawDesc = "" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"J\n" +
 	"\x16ApiResponseTransferAll\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n" +
-	"\amessage\x18\x02 \x01(\tR\amessage2\xa3\x05\n" +
+	"\amessage\x18\x02 \x01(\tR\amessage2\xa9\x05\n" +
 	"\x16TransferCommandService\x12V\n" +
 	"\x0eCreateTransfer\x12\".pb.transfer.CreateTransferRequest\x1a .pb.transfer.ApiResponseTransfer\x12V\n" +
-	"\x0eUpdateTransfer\x12\".pb.transfer.UpdateTransferRequest\x1a .pb.transfer.ApiResponseTransfer\x12^\n" +
-	"\x0fTrashedTransfer\x12$.pb.transfer.FindByIdTransferRequest\x1a%.pb.transfer.TransferResponseDeleteAt\x12^\n" +
-	"\x0fRestoreTransfer\x12$.pb.transfer.FindByIdTransferRequest\x1a%.pb.transfer.TransferResponseDeleteAt\x12g\n" +
+	"\x0eUpdateTransfer\x12\".pb.transfer.UpdateTransferRequest\x1a .pb.transfer.ApiResponseTransfer\x12a\n" +
+	"\x0fTrashedTransfer\x12$.pb.transfer.FindByIdTransferRequest\x1a(.pb.transfer.ApIResponseTransferDeleteAt\x12a\n" +
+	"\x0fRestoreTransfer\x12$.pb.transfer.FindByIdTransferRequest\x1a(.pb.transfer.ApIResponseTransferDeleteAt\x12g\n" +
 	"\x17DeleteTransferPermanent\x12$.pb.transfer.FindByIdTransferRequest\x1a&.pb.transfer.ApiResponseTransferDelete\x12S\n" +
 	"\x12RestoreAllTransfer\x12\x16.google.protobuf.Empty\x1a#.pb.transfer.ApiResponseTransferAll\"\x00\x12[\n" +
 	"\x1aDeleteAllTransferPermanent\x12\x16.google.protobuf.Empty\x1a#.pb.transfer.ApiResponseTransferAll\"\x00BDZBgithub.com/MamangRust/monolith-graphql-payment-gateway-pb/transferb\x06proto3"
@@ -300,14 +300,14 @@ func file_transfer_transfer_command_proto_rawDescGZIP() []byte {
 
 var file_transfer_transfer_command_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_transfer_transfer_command_proto_goTypes = []any{
-	(*CreateTransferRequest)(nil),     // 0: pb.transfer.CreateTransferRequest
-	(*UpdateTransferRequest)(nil),     // 1: pb.transfer.UpdateTransferRequest
-	(*ApiResponseTransferDelete)(nil), // 2: pb.transfer.ApiResponseTransferDelete
-	(*ApiResponseTransferAll)(nil),    // 3: pb.transfer.ApiResponseTransferAll
-	(*FindByIdTransferRequest)(nil),   // 4: pb.transfer.FindByIdTransferRequest
-	(*emptypb.Empty)(nil),             // 5: google.protobuf.Empty
-	(*ApiResponseTransfer)(nil),       // 6: pb.transfer.ApiResponseTransfer
-	(*TransferResponseDeleteAt)(nil),  // 7: pb.transfer.TransferResponseDeleteAt
+	(*CreateTransferRequest)(nil),       // 0: pb.transfer.CreateTransferRequest
+	(*UpdateTransferRequest)(nil),       // 1: pb.transfer.UpdateTransferRequest
+	(*ApiResponseTransferDelete)(nil),   // 2: pb.transfer.ApiResponseTransferDelete
+	(*ApiResponseTransferAll)(nil),      // 3: pb.transfer.ApiResponseTransferAll
+	(*FindByIdTransferRequest)(nil),     // 4: pb.transfer.FindByIdTransferRequest
+	(*emptypb.Empty)(nil),               // 5: google.protobuf.Empty
+	(*ApiResponseTransfer)(nil),         // 6: pb.transfer.ApiResponseTransfer
+	(*ApIResponseTransferDeleteAt)(nil), // 7: pb.transfer.ApIResponseTransferDeleteAt
 }
 var file_transfer_transfer_command_proto_depIdxs = []int32{
 	0, // 0: pb.transfer.TransferCommandService.CreateTransfer:input_type -> pb.transfer.CreateTransferRequest
@@ -319,8 +319,8 @@ var file_transfer_transfer_command_proto_depIdxs = []int32{
 	5, // 6: pb.transfer.TransferCommandService.DeleteAllTransferPermanent:input_type -> google.protobuf.Empty
 	6, // 7: pb.transfer.TransferCommandService.CreateTransfer:output_type -> pb.transfer.ApiResponseTransfer
 	6, // 8: pb.transfer.TransferCommandService.UpdateTransfer:output_type -> pb.transfer.ApiResponseTransfer
-	7, // 9: pb.transfer.TransferCommandService.TrashedTransfer:output_type -> pb.transfer.TransferResponseDeleteAt
-	7, // 10: pb.transfer.TransferCommandService.RestoreTransfer:output_type -> pb.transfer.TransferResponseDeleteAt
+	7, // 9: pb.transfer.TransferCommandService.TrashedTransfer:output_type -> pb.transfer.ApIResponseTransferDeleteAt
+	7, // 10: pb.transfer.TransferCommandService.RestoreTransfer:output_type -> pb.transfer.ApIResponseTransferDeleteAt
 	2, // 11: pb.transfer.TransferCommandService.DeleteTransferPermanent:output_type -> pb.transfer.ApiResponseTransferDelete
 	3, // 12: pb.transfer.TransferCommandService.RestoreAllTransfer:output_type -> pb.transfer.ApiResponseTransferAll
 	3, // 13: pb.transfer.TransferCommandService.DeleteAllTransferPermanent:output_type -> pb.transfer.ApiResponseTransferAll
